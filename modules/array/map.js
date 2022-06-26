@@ -4,7 +4,7 @@ import push from '../../utils/push';
 /**
  * Creates an array of values by running each element in collection thru iteratee.
  * @param {Array|Object} collection The collection to iterate over.
- * @param {Function} iteratee The function invoked per iteration. 
+ * @param {Function} iteratee The function invoked per iteration.
  * @returns Returns the new mapped array.
  */
 const map = (collection, iteratee = (n) => n) => {

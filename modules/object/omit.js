@@ -1,10 +1,10 @@
 import length from '../../utils/length';
 /**
  * The opposite of _.pick;
- * this method creates an object composed of the own and inherited 
+ * this method creates an object composed of the own and inherited
  * enumerable property paths of object that are not omitted.
- * @param {object} object The source object. 
- * @param {string|string[]} keys The property paths to omit. 
+ * @param {object} object The source object.
+ * @param {string|string[]} keys The property paths to omit.
  * @returns Returns the new object.
  */
 const omit = (object, keys) => {

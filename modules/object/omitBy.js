@@ -6,7 +6,7 @@ import length from '../../utils/length';
  * The predicate is invoked with two arguments: (value, key).
  * @param {Object} object The source object.
  * @param {Function} predicate The function invoked per property.
- * @returns Returns the new object. 
+ * @returns Returns the new object.
  */
 const omitBy = (object, predicate) => {
   let result = {};
