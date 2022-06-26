@@ -1,4 +1,5 @@
 import length from '../../utils/length';
+import getEntries from '../../utils/entries';
 /**
  * The opposite of _.pickBy;
  * this method creates an object composed of the own and inherited enumerable string keyed
@@ -10,7 +11,7 @@ import length from '../../utils/length';
  */
 const omitBy = (object, predicate) => {
   let result = {};
-  const entries = Object.entries(object);
+  const entries = getEntries(object);
   const entriesLength = length(entries);
   for (let i = 0; i < entriesLength; i += 1) {
     const key = entries[i][0];

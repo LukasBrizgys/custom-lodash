@@ -1,4 +1,5 @@
 import length from '../../utils/length';
+import getKeys from '../../utils/keys';
 /**
  * it recursively merges own and inherited enumerable string keyed
  * properties of source objects into the destination object.
@@ -12,7 +13,7 @@ import length from '../../utils/length';
  * @returns Returns object.
  */
 const merge = (object, source) => {
-  const keys = Object.keys(source);
+  const keys = getKeys(source);
   const keysLength = length(keys);
   for (let i = 0; i < keysLength; i += 1) {
     const key = keys[i];

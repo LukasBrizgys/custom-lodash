@@ -1,5 +1,6 @@
 import length from '../../utils/length';
 import push from '../../utils/push';
+import getKeys from '../../utils/keys';
 /**
  * Creates an array of own enumerable string keyed-value
  * pairs for object which can be consumed by _.fromPairs.
@@ -8,7 +9,7 @@ import push from '../../utils/push';
  * @returns Returns the key-value pairs.
  */
 const toPairs = (object) => {
-  const keys = Object.keys(object);
+  const keys = getKeys(object);
   const keysLength = length(keys);
   let result = [];
   for (let i = 0; i < keysLength; i += 1) {

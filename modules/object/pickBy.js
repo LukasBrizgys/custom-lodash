@@ -1,4 +1,5 @@
 import length from '../../utils/length';
+import getEntries from '../../utils/entries';
 /**
  * Creates an object composed of the object properties predicate returns truthy for.
  * The predicate is invoked with two arguments: (value, key).
@@ -8,7 +9,7 @@ import length from '../../utils/length';
  */
 const pickBy = (object, predicate) => {
   let result = {};
-  const entries = Object.entries(object);
+  const entries = getEntries(object);
   const entriesLength = length(entries);
   for (let i = 0; i < entriesLength; i += 1) {
     const key = entries[i][0];
