@@ -1,4 +1,4 @@
-import slice from "../../utils/slice";
+import slice from '../../utils/slice';
 /**
  * Function takes array and number of elements as a parameters,
  * elements are taken from the beginning of array
@@ -8,8 +8,8 @@ import slice from "../../utils/slice";
  * @returns {Array} array with elements taken from the beginning
  */
 const take = (array, n = 1) => {
-  const newArray = slice(array,0, n);
+  const newArray = slice(array, 0, n);
   return newArray;
-}
+};
 
 export default take;
