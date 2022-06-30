@@ -13,13 +13,18 @@ import getKeys from '../../utils/keys';
  * @returns Returns object.
  */
 const merge = (object, source) => {
-  const keys = getKeys(source);
-  const keysLength = length(keys);
-  for (let i = 0; i < keysLength; i += 1) {
-    const key = keys[i];
-    if (source[key] instanceof Object) Object.assign(source[key], merge(object[key], source[key]));
-  }
-  Object.assign(object, source);
+    const keys = getKeys(source);
+    const keysLength = length(keys);
+    for(let i = 0; i < keysLength; i += 1) {
+      const sourceValue = source[keys[i]];
+      const objectValue = object[keys[i]];
+      if(typeof sourceValue == 'object' && typeof objectValue === 'object') {
+        object[keys[i]] = merge(objectValue, sourceValue);
+      }else{
+        object[keys[i]] = sourceValue;
+      }
+    }
+    
   return object;
 };
 
